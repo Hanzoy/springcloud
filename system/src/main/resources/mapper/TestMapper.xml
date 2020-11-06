@@ -6,7 +6,7 @@
 <mapper namespace="com.hanzoy.system.mapper.TestMapper">
 
     <select id="list" resultType="com.hanzoy.system.domain.Test">
-        select `id`, `name` from `test`
+        select t.id, t.name  from courseimooc.test t
     </select>
 
 </mapper>

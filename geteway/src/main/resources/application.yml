@@ -4,10 +4,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: system
-          uri: http://127.0.0.1:9001
-          predicates:
-            - Path: /system/**
+      - id: system
+        uri: http://127.0.0.1:9001
+        predicates:
+        - Path=/system/**
 
 server:
   port: 9000

@@ -56,6 +56,11 @@
                 <scope>provided</scope>
             </dependency>
 
+            <dependency>
+                <groupId>com.hanzoy</groupId>
+                <artifactId>server</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

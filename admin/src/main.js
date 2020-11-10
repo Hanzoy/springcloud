@@ -1,7 +1,10 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
 
-import jq from '../public/ace/ace-master/assets/js/jquery-2.1.4.min.js';
+Vue.config.productionTip = false
 
-createApp(App).mount('#app')
-
+new Vue({
+  router,
+  render: h => h(App),
+}).$mount('#app')

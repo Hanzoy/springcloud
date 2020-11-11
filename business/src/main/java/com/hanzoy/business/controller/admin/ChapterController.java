@@ -13,13 +13,13 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/admin/chapter")
 public class ChapterController {
 
     @Resource
     private ChapterService chapterService;
 
-    @GetMapping("/chapter")
+    @GetMapping("/list")
     public List<ChapterDto> chapter(){
         log.info("chapter");
         return chapterService.list();

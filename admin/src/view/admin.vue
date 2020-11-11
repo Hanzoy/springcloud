@@ -353,7 +353,7 @@
 
                 <ul class="nav nav-list">
                     <li class="">
-                        <router-link to="/admin/welcome">
+                        <router-link to="/welcome">
                             <i class="menu-icon fa fa-tachometer"></i>
                             <span class="menu-text"> 欢迎 </span>
                         </router-link>
@@ -403,7 +403,7 @@
 
                         <ul class="submenu">
                             <li class="active">
-                                <router-link to="/admin/business/chapter" class="dropdown-toggle">
+                                <router-link to="/business/chapter" class="dropdown-toggle">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     大章管理
                                 </router-link>
@@ -467,7 +467,19 @@
 
 <script>
     export default {
-        name: "admin"
+        name: "admin",
+        mounted: function() {
+            let _this = this;
+            _this.list();
+        },
+        methods:{
+            list(){
+                let _this = this;
+                _this.$ajax.get('http://127.0.0.1:9002/business/admin/chapter/list').then((res)=>{
+                    console.log("查询结果",res);
+                })
+            }
+        }
     }
 </script>
 

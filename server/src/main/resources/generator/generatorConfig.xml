@@ -37,6 +37,7 @@
                              targetPackage="com.hanzoy.server.mapper"
                              type="XMLMAPPER"/>
 
-        <table tableName="test" domainObjectName="Test"/>
+<!--        <table tableName="test" domainObjectName="Test"/>-->
+        <table tableName="chapter" domainObjectName="Chapter"/>
     </context>
 </generatorConfiguration>
